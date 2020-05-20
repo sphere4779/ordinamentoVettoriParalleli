@@ -14,7 +14,7 @@ public class functions {
         //bubblesort che ordina 3 vettori paralleli
         do {
             scambi = false;
-            for (y = 0; y < Main.dim - 1; y++) {
+            for (y = 0; y < nomi.length - 1; y++) {
                 //trasformo i parametri necessari per il bubblesort in interi per semplificare il if
                 buffer0 = Integer.parseInt(voti[y].substring(0, voti[y].indexOf('/')));
                 buffer1 = Integer.parseInt(voti[y + 1].substring(0, voti[y + 1].indexOf('/')));
@@ -49,7 +49,7 @@ public class functions {
 
     public static void printParVect(String[] cognomi, String[] nomi, String[] voti) { //stampa i tre vettori allo stesso indice ogni ciclo e crea una specie di tabella
 
-        for (int i = 0; i < Main.dim; i++) {
+        for (int i = 0; i < nomi.length; i++) {
             System.out.print("[ ");
             System.out.print(cognomi[i] + " | ");
             System.out.print(nomi[i] + " | ");
@@ -60,7 +60,7 @@ public class functions {
 
     public static void manualInsert(String[] cognomi, String[] nomi, String[] voti) { //per inserire i voti manualmente
         int buffer;
-        for (int i = 0; i < Main.dim; i++) {
+        for (int i = 0; i < nomi.length; i++) {
             do { //prima di inserire il nuovo valore nel vettore uso una variabile buffer per controllare se il numero inserito è nel range di numeri accettabili
                 System.out.println("inserire il voto per " + cognomi[i] + " " + nomi[i]);
                 buffer = in.nextInt();
